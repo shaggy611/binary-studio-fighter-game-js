@@ -97,14 +97,14 @@ export function getDamage(attacker, defender) {
 
 export function getHitPower(fighter) {
     // return hit power
-    const criticalChance = Math.floor(Math.random() * 2) + 1;
-    return fighter.attack * criticalChance;
+    const hitPower = (Math.floor(Math.random() * 2) + 1) * fighter.attack;
+    return hitPower;
 }
 
 export function getBlockPower(fighter) {
     // return block power
-    const dodgeChance = Math.floor(Math.random() * 2) + 1;
-    return fighter.defense * dodgeChance;
+    const blockPower = (Math.floor(Math.random() * 2) + 1) * fighter.defense;
+    return blockPower;
 }
 
 export function isCriticalStrikeAvailable(lastCriticalStrikeTime) {
